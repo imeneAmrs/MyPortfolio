@@ -1,0 +1,693 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --primary-color: #2A303C;
+    --secondary-color: #1c3fa8;
+    --third-color: #6419E6;
+    --light-color: #f4f4f4;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+h1,
+h2 {
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+p {
+    margin: 10px 0;
+}
+
+img {
+    width: 100%;
+}
+
+.flashy-color {
+    color: #6419E6;
+}
+
+.navbar {
+    background-color: var(--primary-color);
+    color: #A6ADBA;
+    height: 70px;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar a {
+    color: #A6ADBA;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.navbar a:hover {
+    border-bottom: 2px solid #6419E6;
+}
+
+.navbar .flex {
+    justify-content: space-between;
+}
+
+/* Showcase */
+.showcase {
+    height: 500px;
+    background-color: var(--primary-color);
+    color: #A6ADBA;
+    position: relative;
+}
+
+.showcase h1 {
+    font-size: 40px;
+
+}
+
+.showcase p {
+    margin: 20px 0;
+}
+
+.showcase .grid {
+    overflow: visible;
+    grid-template-columns: 55% 45%;
+    gap: 30px;
+}
+
+.showcase-profile {
+    position: relative;
+    top: 80px;
+    /* height: 450px; */
+    width: 400px;
+    padding: 40px;
+    z-index: 100;
+    justify-self: flex-end;
+}
+
+.showcase .profile-picture {
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.showcase .profile-picture img {
+    border-radius: 50%;
+    height: 150%;
+    width: 150%;
+    object-fit: cover;
+    margin: auto;
+    position: absolute;
+    top: -30%;
+    left: -25%;
+
+}
+
+.showcase .profile-body h2 {
+    font-weight: 800;
+    text-align: center;
+}
+
+.showcase .profile-body i {
+    color: #6419E6;
+    content: '';
+}
+
+.showcase .profile-body ul li::before {
+    content: "•";
+    padding-right: 5px;
+    font-size: 10px;
+}
+
+.showcase .profile-body ul li {
+    display: inline-block;
+    font-size: 12px;
+}
+
+#mark {
+    font-weight: 800;
+}
+
+#mark:hover {
+    text-decoration: underline;
+}
+
+/*pseudo selector classes */
+.showcase::before,
+.showcase::after {
+    content: '';
+    color: black;
+    position: absolute;
+    height: 100px;
+    bottom: -70px;
+    right: 0;
+    left: 0;
+    background: #fff;
+    transform: skewY(-3deg);
+    -webkit-transform: skewY(-3deg);
+    -moz-transform: skewY(-3deg);
+    -ms-transform: skewY(-3deg);
+    
+}
+
+/* cards inside profile */
+/* cards inside project section */
+.profile-body .flex {
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.profile-cards .card,
+.project-cards .card {
+    text-align: center;
+    margin: 7px;
+    transition: transform 0.2s ease-in;
+    padding: 10px;
+}
+
+.profile-cards .card h4,
+.project-cards .card h4 {
+    font-size: 12px;
+    display: inline-block;
+}
+
+.profile-cards .card:hover,
+.project-cards .card:hover {
+    transform: translateY(-5px);
+}
+
+.profile-name img {
+    width: 20px;
+    height: 20px;
+}
+
+
+
+/* projects Project*/
+.projects {
+    padding-top: 100px;
+}
+
+.projects-heading {
+    max-width: 500px;
+    margin: auto !important;
+}
+
+.projects .grid h4 {
+    font-size: 25px;
+    color: #6419E6;
+    margin-bottom: 5px;
+}
+
+.projects .grid h4:hover {
+    color: rgb(100, 25, 230, 0.7);
+}
+
+.projects h3 {
+    font-size: 35px;
+}
+
+.projects .grid p {
+    font-size: 16px;
+    font-weight: 550;
+    margin-top: 20px;
+}
+
+.project-image {
+    height: 450px;
+    width: 500px;
+    padding: 0 !important;
+}
+
+.abt-project .flex {
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap !important;
+}
+
+.projects ul li::before {
+    content: "•";
+    padding-right: 2px;
+    padding-left: 10px;
+    font-size: 10px;
+}
+
+.projects ul li {
+    display: inline-block;
+    font-size: 12px;
+}
+
+/* Image Pagination */
+
+.nav-btn::before,
+.nav-btn::after {
+    color: #fff;
+}
+
+.swiper-pagination-bullet-active {
+    border: 5px solid #6419E6;
+}
+
+
+/* Certifications */
+.certification .card {
+    width: 400px;
+    /* height: 310px; */
+    margin: 5px auto;
+    padding: 0px;
+    box-shadow: 0 3px 10px rgb(100, 25, 230, 0.5);
+    object-fit: cover !important;
+}
+
+.certification .card-pending {
+    position: relative;
+    margin: 0 auto;
+}
+
+.certification .card-pending .content {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 30px;
+}
+
+/* Languages */
+.languages .flex {
+    flex-wrap: wrap;
+}
+
+.languages .card {
+    text-align: center;
+    margin: 18px 10px 40px;
+    transition: transform 0.2s ease-in;
+}
+
+.languages .card h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.languages .card:hover {
+    transform: translateY(-15px);
+}
+
+/* Contact */
+.contact {
+    margin: 40px 0;
+}
+
+.contact-form .form-control {
+    margin: 30px 0;
+
+}
+
+.contact-form input[type='text'],
+.contact-form input[type='email'],
+.contact-form textarea {
+    border: 0;
+    border-bottom: 1px solid #b4becb;
+    width: 100%;
+    padding: 3px;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    height: 100px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+}
+
+/* form response */
+.form-response {
+    margin-top: 120px;
+}
+
+/* Footer */
+.footer .social a {
+    margin: 0 10px;
+}
+
+.footer .flex {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.fbottom{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 20px !important;
+}
+
+/* Utilities = classes that we use all over the website*/
+/* we can put this in other file utilities.css */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 40px;
+}
+
+.card {
+    background-color: #fff;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    cursor: pointer;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    transform: scale(.98);
+}
+
+/* backgrounds & colored buttons */
+.bg-primary,
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.bg-secondary,
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+.bg-dark,
+.btn-dark {
+    background-color: var(--third-color);
+    color: #fff;
+}
+
+.bg-primary a,
+.btn-primary a,
+.bg-secondary a,
+.btn-secondary a,
+.bg-dark a,
+.btn-dark a {
+    color: #fff;
+}
+
+.bg-light,
+.btn-light {
+    background-color: var(--light-color);
+    color: #333;
+}
+
+/* Text Sizes */
+.lead {
+    font-size: 20px;
+}
+
+.sm {
+    /* small*/
+    font-size: 1rem;
+}
+
+.md {
+    /*midium*/
+    font-size: 2rem;
+}
+
+.lg {
+    /* Large */
+    font-size: 3rem;
+}
+
+.xl {
+    /* XLarge*/
+    font-size: 4rem;
+}
+
+/* Utilities */
+.text-center {
+    text-align: center;
+}
+
+.btn-outline {
+    background-color: var(--third-color);
+    /* border: 1px solid #fff; */
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Margin */
+.my-1 {
+    margin: 1rem 0;
+}
+
+.my-2 {
+    margin: 1.5rem 0;
+}
+
+.my-3 {
+    margin: 2rem 0;
+}
+
+.my-4 {
+    margin: 3rem 0;
+}
+
+.my-5 {
+    margin: 4rem 0;
+}
+
+.m-1 {
+    margin: 1rem;
+}
+
+.m-2 {
+    margin: 1.5rem;
+}
+
+.m-3 {
+    margin: 2rem;
+}
+
+.m-4 {
+    margin: 3rem;
+}
+
+.m-5 {
+    margin: 4rem;
+}
+
+/* Padding */
+.py-1 {
+    padding: 1rem 0;
+}
+
+.py-2 {
+    padding: 1.5rem 0;
+}
+
+.py-3 {
+    padding: 2rem 0;
+}
+
+.py-4 {
+    padding: 3rem 0;
+}
+
+.py-5 {
+    padding: 4rem 0;
+}
+
+.p-1 {
+    padding: 1rem;
+}
+
+.p-2 {
+    padding: 1.5rem;
+}
+
+.p-3 {
+    padding: 2rem;
+}
+
+.p-4 {
+    padding: 3rem;
+}
+
+.p-5 {
+    padding: 4rem;
+}
+
+
+@media(max-width: 1024px) {
+    .grid,
+    .showcase .grid,
+    .projects .grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    .showcase-profile {
+        top: 20px;
+    }
+    .projects {
+        padding-top: 200px;
+    }
+
+}
+
+@media(max-width: 768px) {
+
+    /* we want everything to be in one column */
+    .grid,
+    .showcase .grid,
+    .projects .grid,
+    .certification .grid,
+    .contact .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .showcase {
+        height: auto;
+        /* to take the amount of the container*/
+    }
+
+    .showcase-text {
+        text-align: center;
+        margin: 40px 10px 0px;
+    }
+
+    .showcase-profile {
+        width: 360px;
+        justify-self: center;
+        margin: auto;
+    }
+
+    .profile-body .flex {
+        margin-top: 5px;
+    }
+
+    .profile-cards .card,
+    .project-cards .card {
+        margin: 5px;
+        padding: 8px;
+    }
+
+    .profile-cards .card h4,
+    .project-cards .card h4 {
+        font-size: 10px;
+    }
+
+    .abt-project {
+
+        margin: 0 auto;
+    }
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+    .navbar {
+        height: 130px;
+    }
+
+    .navbar .flex {
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .abt-project .flex {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .projects .project-image {
+        height: 380px;
+        width: 430px;
+        padding: 0 !important;
+    }
+
+    .abt-project .flex {
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap !important;
+    }
+
+}
+
+@media (max-width: 420px) {
+    .projects .project-image {
+        height: 300px;
+        width: 350px;
+        padding: 0 !important;
+    }
+
+    .certification .card {
+        width: 300px;
+        height: 230px;
+    }
+
+    .navbar a {
+        font-size: 14px;
+    }
+
+}
