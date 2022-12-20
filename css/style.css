@@ -122,7 +122,6 @@ img {
     position: absolute;
     top: -30%;
     left: -25%;
-
 }
 
 .showcase .profile-body h2 {
@@ -169,7 +168,7 @@ img {
     -webkit-transform: skewY(-3deg);
     -moz-transform: skewY(-3deg);
     -ms-transform: skewY(-3deg);
-    
+
 }
 
 /* cards inside profile */
@@ -233,6 +232,7 @@ img {
     font-size: 16px;
     font-weight: 550;
     margin-top: 20px;
+    text-align: justify;
 }
 
 .project-image {
@@ -360,7 +360,8 @@ img {
     align-items: center;
     justify-content: center;
 }
-.fbottom{
+
+.fbottom {
     position: absolute;
     width: 100%;
     bottom: 0;
@@ -572,19 +573,23 @@ img {
 
 
 @media(max-width: 1024px) {
+
     .grid,
     .showcase .grid,
-    .projects .grid{
+    .projects .grid {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
     }
+
     .container {
         max-width: 900px;
         margin: 0 auto;
     }
+
     .showcase-profile {
         top: 20px;
     }
+
     .projects {
         padding-top: 200px;
     }
@@ -688,6 +693,38 @@ img {
 
     .navbar a {
         font-size: 14px;
+    }
+
+}
+
+@media (max-width: 360px) {
+
+    .showcase-text {
+        text-align: justify;
+        margin: 40px 25px 0px;
+    }
+
+    .showcase-text h1 {
+        font-size: 34px;
+    }
+
+    .showcase-profile {
+        width: 340px;
+    }
+
+    .showcase .profile-picture {
+        width: 100px;
+        height: 100px;
+    }
+
+    /**/
+    .projects .project-image {
+        height: 260px;
+        width: 310px;
+    }
+
+    .navbar a {
+        font-size: 13px;
     }
 
 }
