@@ -86,6 +86,7 @@ img {
 
 .showcase p {
     margin: 20px 0;
+    text-align: justify;
 }
 
 .showcase .grid {
